@@ -12,7 +12,7 @@ public class HelloResponseDtoTest {
         String password = "persona33";
 
         //when
-        HelloResponseDto dto = new HelloResponseDto(email, password);
+        TemporageResponseDto dto = new TemporageResponseDto(email, password);
 
         //then
         assertThat(dto.getEmail()).isEqualTo(email);
