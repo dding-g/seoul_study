@@ -13,7 +13,7 @@ https://ddingg.tistory.com/44</br>
 ##### 토이 프로젝트 시작 : Temporage(회사 같은 제한적인 공간에서 자신이 필요한 링크 혹은 메모를 remote storage에 임시로 보관할 수 있는 프로그램)</br>
 ##### 기술 스택 참고 : https://github.com/haneunjung/log/blob/master/log/2020-01-11.md </br></br></br>
 ##### DB 구성</br>
-![temporage_db](./img/temporage_db)
+![temporage_db](https://user-images.githubusercontent.com/29707967/72516191-9be4cd80-3894-11ea-8d1b-1f4ab56da826.png)
 
 #### 기능</br>
 1. key, value를 받아 DB에 저장. - 완료
