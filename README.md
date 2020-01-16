@@ -22,19 +22,19 @@ CREATE SEQUENCE seq_id START 1;
 
 -- DROP TABLE public.temporage_data;
 
-CREATE TABLE public.temporage_data
-(
-    id integer NOT NULL DEFAULT nextval('seq_id'::regclass),
-    key text COLLATE pg_catalog."default" NOT NULL,
-    value text COLLATE pg_catalog."default" NOT NULL,
-    create_time timestamp without time zone NOT NULL,
-    CONSTRAINT temporage_data_pkey PRIMARY KEY (id)
-)
+CREATE TABLE public.temporage_data</br>
+(</br>
+    id integer NOT NULL DEFAULT nextval('seq_id'::regclass),</br>
+    key text COLLATE pg_catalog."default" NOT NULL,</br>
+    value text COLLATE pg_catalog."default" NOT NULL,</br>
+    create_time timestamp without time zone NOT NULL,</br>
+    CONSTRAINT temporage_data_pkey PRIMARY KEY (id)</br>
+)</br>
 
-TABLESPACE pg_default;
+TABLESPACE pg_default;</br>
 
-ALTER TABLE public.temporage_data
-    OWNER to postgres;
+ALTER TABLE public.temporage_data</br>
+    OWNER to postgres;</br>
     
     
 #### 기능</br>
