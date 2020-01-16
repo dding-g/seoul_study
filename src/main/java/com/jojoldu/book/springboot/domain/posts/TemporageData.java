@@ -11,10 +11,10 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @Entity
-public class AppData {
+public class TemporageData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Column(length = 65536, nullable = false)
     private String key;
@@ -23,7 +23,7 @@ public class AppData {
     private String value;
 
     @Builder
-    public AppData(String key, String value){
+    public TemporageData(String key, String value){
         this.key = key;
         this.value = value;
     }
