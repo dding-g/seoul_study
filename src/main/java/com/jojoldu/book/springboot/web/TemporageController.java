@@ -39,7 +39,7 @@ public class TemporageController {
 
     @GetMapping("/getData")
     public List<TemporageData> dataResponse(@RequestParam("key") String key){
-        List<TemporageData> resultData = appDataRepository.findByKey(key);
-        return resultData;
+        return appDataRepository.findByKey(key);
     }
+
 }
