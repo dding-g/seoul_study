@@ -15,6 +15,28 @@ https://ddingg.tistory.com/44</br>
 ##### DB 구성</br>
 ![temporage_db](https://user-images.githubusercontent.com/29707967/72516191-9be4cd80-3894-11ea-8d1b-1f4ab56da826.png)
 
+##### DB 생성 쿼리</br>
+CREATE SEQUENCE seq_id START 1;
+
+-- Table: public.temporage_data
+
+-- DROP TABLE public.temporage_data;
+
+CREATE TABLE public.temporage_data
+(
+    id integer NOT NULL DEFAULT nextval('seq_id'::regclass),
+    key text COLLATE pg_catalog."default" NOT NULL,
+    value text COLLATE pg_catalog."default" NOT NULL,
+    create_time timestamp without time zone NOT NULL,
+    CONSTRAINT temporage_data_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.temporage_data
+    OWNER to postgres;
+    
+    
 #### 기능</br>
 1. key, value를 받아 DB에 저장. - 완료
 2. key 값으로 DB에 있는 값을 Searching 해서 결과를 반환. - 완료
