@@ -1,18 +1,16 @@
 package com.jojoldu.book.springboot.domain.posts;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+@NoArgsConstructor @AllArgsConstructor
+@Entity
 @Getter
 @Setter
-@NoArgsConstructor
-@Entity
 public class TemporageData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,12 +24,13 @@ public class TemporageData {
 
     @Column
     @CreationTimestamp
-    private LocalDateTime create_time;
-
+    private LocalDate create_time;
 
     @Builder
     public TemporageData(String key, String value){
         this.key = key;
         this.value = value;
     }
+
+
 }

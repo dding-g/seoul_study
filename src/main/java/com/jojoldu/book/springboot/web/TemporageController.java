@@ -5,11 +5,13 @@ import com.jojoldu.book.springboot.domain.posts.TemporageDataRepository;
 import org.h2.util.json.JSONArray;
 import org.h2.util.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -39,7 +41,8 @@ public class TemporageController {
 
     @GetMapping("/getData")
     public List<TemporageData> dataResponse(@RequestParam("key") String key){
-        return appDataRepository.findByKey(key);
+        LocalDateTime current_date = LocalDateTime.now(); //현재 시각 받아옴
+        return appDataRepository.findByKey(key, current_date);
     }
 
 }
