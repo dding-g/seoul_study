@@ -13,17 +13,20 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name="temporage_data")
-public class TemporageData {
+@Table(name="temporage_user_data")
+public class TemporageUserData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(length = 65536, nullable = false)
-    private String key;
+    @Column(length = 128, nullable = false)
+    private String email;
 
-    @Column(length = 65536, nullable = false)
-    private String value;
+    @Column(length = 128, nullable = false)
+    private String password;
+
+    @Column(length = 32, nullable = false)
+    private String name;
 
     @Column
     @CreationTimestamp
@@ -31,8 +34,9 @@ public class TemporageData {
 
 
     @Builder
-    public TemporageData(String key, String value){
-        this.key = key;
-        this.value = value;
+    public TemporageUserData(String email, String password, String name){
+        this.email = email;
+        this.password = password;
+        this.name = name;
     }
 }

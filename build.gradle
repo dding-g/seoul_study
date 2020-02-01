@@ -29,6 +29,8 @@ dependencies {
     runtimeOnly 'org.postgresql:postgresql' // 추가 01/13
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation group: 'org.mindrot', name: 'jbcrypt', version: '0.3m' //Bcrypt 암호화
+
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
