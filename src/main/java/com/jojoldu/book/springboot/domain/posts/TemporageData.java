@@ -7,13 +7,13 @@ import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name="temporage_data")
+@Table(name = "temporage_data")
 public class TemporageData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,8 +27,7 @@ public class TemporageData {
 
     @Column
     @CreationTimestamp
-    private LocalDateTime create_time;
-
+    private LocalDate create_time;
 
     @Builder
     public TemporageData(String key, String value){

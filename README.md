@@ -49,3 +49,7 @@ ALTER TABLE public.temporage_data</br>
 ##### key로 값을 찾아 return함. key, value, datetime이 return 됨.
 
 
+
+#### 추가 기능
+##### [ ]SNS와 연동. 내용을 바로 SNS에 올릴 수 있게 해줌
+##### [ ]회원가입, 로그인 - 3주차  
